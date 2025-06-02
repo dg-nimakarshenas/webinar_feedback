@@ -264,7 +264,7 @@ if st.session_state.page == "form":
             "Malagasy", "Latvian", "Lithuanian", "Estonian", "Somali", "Maltese", "Corsican",
             "Luxembourgish", "Occitan", "Welsh", "Albanian", "Macedonian", "Icelandic", "Slovenian",
             "Galician", "Basque", "Azerbaijani", "Uzbek", "Kazakh", "Mongolian", "Lao", "Telugu",
-            "Marathi", "Chichewa", "Esperanto", "Tajik", "Yiddish", "Zulu", "Sundanese", "Tatar", "Tswana"
+            "Marathi", "Chichewa", "Esperanto", "Tajik", "Yiddish", "Zulu", "Sundanese", "Tatar", "Tswana", "Bulgarian"
         ])
         # Pre-select language and role if they exist in session_state
         lang_idx = 0
@@ -568,7 +568,7 @@ elif st.session_state.page == "chat":
                 "Malagasy", "Latvian", "Lithuanian", "Estonian", "Somali", "Maltese", "Corsican",
                 "Luxembourgish", "Occitan", "Welsh", "Albanian", "Macedonian", "Icelandic", "Slovenian",
                 "Galician", "Basque", "Azerbaijani", "Uzbek", "Kazakh", "Mongolian", "Lao", "Telugu",
-                "Marathi", "Chichewa", "Esperanto", "Tajik", "Yiddish", "Zulu", "Sundanese", "Tatar", "Tswana"
+                "Marathi", "Chichewa", "Esperanto", "Tajik", "Yiddish", "Zulu", "Sundanese", "Tatar", "Tswana", "Bulgarian"
             ])))
 
             current_language = st.session_state.language
