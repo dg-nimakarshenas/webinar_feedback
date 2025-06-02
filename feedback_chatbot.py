@@ -717,11 +717,11 @@ elif st.session_state.page == "chat":
 
 
     # --- Run the Chatbot ---
-    if "role" in st.session_state and "language" in st.session_state:
+    if "organisation" in st.session_state and "language" in st.session_state:
         chatbot = ContextChatbot()
         chatbot.main()
     else:
-        st.warning("Role or language not selected. Please go back to the form.")
+        st.warning("Organisation or language not selected. Please go back to the form.")
         if st.button("Back to Form"):
             if "messages" in st.session_state and st.session_state.messages:
                 print("Back to Form button clicked. Saving conversation...")
