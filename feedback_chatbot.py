@@ -587,22 +587,6 @@ elif st.session_state.page == "chat":
                 index=language_options.index(current_language),
                 on_change=self.change_language_callback
             )
-            # --- Save Conversation Button ---
-            if st.button(self.end_conversation_text, key="end_conversation_button"): # Use translated text
-                # This message will be in English unless translated separately
-                st.info("Ending conversation and saving data...")
-                save_conversation_data()
-
-                # Clear chat-specific state, keep user details for form prefill
-                keys_to_pop_on_end = ["messages", "chain", "initial_message_sent", "current_page",
-                                      "display_translated_message", "last_interaction_time"]
-                for key in keys_to_pop_on_end:
-                    st.session_state.pop(key, None)
-
-                st.session_state.page = "form"
-                # This toast message will be in English
-                st.toast("Conversation ended and saved. Returning to form.", icon="👋")
-                st.rerun()
             # --- Initialize Chat History and First Message ---
             if "messages" not in st.session_state:
                 st.session_state.messages = []
@@ -713,6 +697,22 @@ elif st.session_state.page == "chat":
                         msg_placeholder.markdown(error_msg)
 
                 # Rerun to clear text input and potentially reset file uploader
+                st.rerun()
+            # --- Save Conversation Button ---
+            if st.button(self.end_conversation_text, key="end_conversation_button"): # Use translated text
+                # This message will be in English unless translated separately
+                st.info("Ending conversation and saving data...")
+                save_conversation_data()
+
+                # Clear chat-specific state, keep user details for form prefill
+                keys_to_pop_on_end = ["messages", "chain", "initial_message_sent", "current_page",
+                                      "display_translated_message", "last_interaction_time"]
+                for key in keys_to_pop_on_end:
+                    st.session_state.pop(key, None)
+
+                st.session_state.page = "form"
+                # This toast message will be in English
+                st.toast("Conversation ended and saved. Returning to form.", icon="👋")
                 st.rerun()
 
 
