@@ -106,7 +106,7 @@ def save_conversation_data():
 
         insert_conversation_query = """
         INSERT INTO conversations (timestamp, language, role, organisation, contact_details, feedback_type)
-        VALUES (%s, %s, %s, %s, %s, 'feedback_type')
+        VALUES (%s, %s, %s, %s, %s, 'Webinar')
         RETURNING id;
         """
         cur.execute(insert_conversation_query, (
