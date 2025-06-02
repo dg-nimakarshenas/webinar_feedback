@@ -327,7 +327,7 @@ elif st.session_state.page == "chat":
                 st.toast("Session ended due to inactivity. Data saved. Returning to form.", icon="⏱️")
                 st.rerun()
     
-    st.title('SHDF Feedback Chatbot')
+    st.title('DG Cities Feedback Chatbot')
     if "language" in st.session_state:
         st.write(f"**Language:** {st.session_state.language}")
     st.session_state.current_language = st.session_state.language
