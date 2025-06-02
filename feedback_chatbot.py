@@ -230,10 +230,8 @@ if "page" not in st.session_state:
 
 # --- Setup form ---
 if st.session_state.page == "form":
-    st.title('Welcome to the SHDF Feedback Chatbot!')
-    st.write("""This chatbot is designed to assist you with your feedback and inquiries.
-    Your responses will help us tailor the experience to your needs.
-    Please note that this is a demo version and may not reflect the final product
+    st.title('Welcome to the DG Cities Webinar Feedback Chatbot!')
+    st.write("""This chatbot is designed to collect feedback on the recent webinar hosted by DG Cities.
     We appreciate your feedback!
     Please fill out the form below to get started.""")
     
